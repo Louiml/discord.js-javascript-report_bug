@@ -1,13 +1,6 @@
-const express = require('express')
-const app = express();
-const port = 3000
-const Discord = require('discord.js');
-const config = require('./config.json')
-const client = new Discord.Client();
 
-app.listen(port, () =>
-console.log(`Creator: louiml.net`)
-);
+const Discord = require('discord.js');
+const client = new Discord.Client();
 const { MessageButton, MessageActionRow } = require('discord-buttons'); 
 const { isArgumentsObject } = require('util/types');
 require('discord-buttons')(client);
@@ -53,4 +46,4 @@ component: row
 })
 })
 
-client.login(process.env.TOKEN)
+client.login("")

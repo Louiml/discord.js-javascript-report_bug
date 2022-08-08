@@ -15,7 +15,14 @@ if (message.content !== `${config.command}`) return;
   .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
   .setColor(`#0x2F3136`)
 
-
+  let btn = new MessageButton()
+    .setStyle("red")
+    .setLabel("fix the bug")
+    .setDisabled(false)
+    .setID("fixed")
+        let reportbtn = new MessageActionRow()
+            .addComponent(btn)
+        
   message.channel.send({
     button: reportbtn,
     embed: embed 
